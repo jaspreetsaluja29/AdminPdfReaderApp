@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "PDF Reader";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div style="color: red;">@ViewBag.ErrorMessage</div>
+}
+else
+{
+    <iframe src="@Url.Content(Model)" style="width:100%; height:600px;" frameborder="0"></iframe>
+}
